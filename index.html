@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Snake Adventure - Learn Math Through Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="game-area">
+            <div class="game-info">
+                <div class="score-board">
+                    <span>🏆 Score: <span id="score">0</span></span>
+                    <span>🎆 Level: <span id="level">1</span></span>
+                    <span>❤️ Lives: <span id="lives">3</span></span>
+                </div>
+                
+                <div class="current-problem" id="currentProblem">
+                    <h3>Solve: <span id="mathProblem">2 + 2</span></h3>
+                    <input type="number" id="answerInput" placeholder="Enter your answer">
+                    <button id="submitAnswer">✨ Submit Answer! ✨</button>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas" width="1200" height="400"></canvas>
+            
+            <div class="game-controls">
+                <button id="startBtn">Start Game</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="restartBtn">Restart</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>🐍 The snake moves automatically around the screen</li>
+                <li>➕ Math problems appear in circles on the screen</li>
+                <li>✅ Enter the correct answer to make the snake eat the problem</li>
+                <li>❌ Wrong answers make the snake crash into the wall</li>
+                <li>🎯 Score points for each correct answer</li>
+                <li>⬆️ Level up to face harder problems</li>
+            </ul>
+        </div>
+
+        <div class="game-over" id="gameOverScreen" style="display: none;">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="mathProblems.js"></script>
+    <script src="snakeGame.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
